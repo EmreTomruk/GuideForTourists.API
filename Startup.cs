@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TouristGuide.API.Data;
+using TouristGuide.API.Data.Concrete;
 
 namespace TouristGuide.API
 {
@@ -30,6 +31,9 @@ namespace TouristGuide.API
             services.AddDbContext<TouristGuideContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
+
+            services.AddScoped<IEntityRepository, EfEntityRepositoryBase>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TouristGuide.API", Version = "v1" });

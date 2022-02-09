@@ -11,7 +11,6 @@ D:\Emre Tomruk\repos\TouristGuide.API\bin\Debug\net5.0\Microsoft.OpenApi.dll
 D:\Emre Tomruk\repos\TouristGuide.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Emre Tomruk\repos\TouristGuide.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Emre Tomruk\repos\TouristGuide.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Emre Tomruk\repos\TouristGuide.API\obj\Debug\net5.0\TouristGuide.API.csproj.AssemblyReference.cache
 D:\Emre Tomruk\repos\TouristGuide.API\obj\Debug\net5.0\TouristGuide.API.GeneratedMSBuildEditorConfig.editorconfig
 D:\Emre Tomruk\repos\TouristGuide.API\obj\Debug\net5.0\TouristGuide.API.AssemblyInfoInputs.cache
 D:\Emre Tomruk\repos\TouristGuide.API\obj\Debug\net5.0\TouristGuide.API.AssemblyInfo.cs
@@ -58,3 +57,4 @@ D:\Emre Tomruk\repos\TouristGuide.API\bin\Debug\net5.0\runtimes\win\lib\netstand
 D:\Emre Tomruk\repos\TouristGuide.API\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Emre Tomruk\repos\TouristGuide.API\bin\Debug\net5.0\Humanizer.dll
 D:\Emre Tomruk\repos\TouristGuide.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Emre Tomruk\repos\TouristGuide.API\obj\Debug\net5.0\TouristGuide.API.csproj.AssemblyReference.cache
