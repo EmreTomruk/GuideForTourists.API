@@ -13,6 +13,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using TouristGuide.API.Data;
 using TouristGuide.API.Data.Concrete;
+using TouristGuide.API.Helpers;
+using AutoMapper;
+using Newtonsoft;
 
 namespace TouristGuide.API
 {
@@ -30,7 +33,11 @@ namespace TouristGuide.API
         {
             services.AddDbContext<TouristGuideContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
 
             services.AddScoped<IEntityRepository, EfEntityRepositoryBase>();
 
@@ -51,6 +58,7 @@ namespace TouristGuide.API
             }
 
             app.UseRouting();
+
 
             app.UseAuthorization();
 
