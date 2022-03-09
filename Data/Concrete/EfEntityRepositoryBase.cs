@@ -19,36 +19,36 @@ namespace TouristGuide.API.Data.Concrete
         {
             _context.Add(entity);
         }
-         
+
         public void Delete<T>(T entity)
         {
             _context.Remove(entity);
         }
 
-        public async Task<List<City>> GetCities()
+        public List<City> GetCities()
         {
-            var cities = await _context.Cities.Include(c => c.Photos).ToListAsync();
+            var cities = _context.Cities.Include(c => c.Photos).ToList();
 
             return cities;
         }
 
-        public async Task<City> GetCityById(int id)
+        public City GetCityAndTheirPhotosById(int id)
         {
-            var city = await _context.Cities.Include(c => c.Photos).FirstOrDefaultAsync(c => c.Id == id);
+            var city = _context.Cities.Include(c => c.Photos).FirstOrDefault(c => c.Id == id);
 
             return city;
         }
 
-        public async Task<List<Photo>> GetPhotosByCity(int cityId)
+        public List<Photo> GetPhotosByCity(int cityId)
         {
-            var photos = await _context.Photos.Where(p => p.CityId == cityId).ToListAsync();
+            var photos = _context.Photos.Where(p => p.CityId == cityId).ToList();
 
             return photos;
         }
 
-        public async Task<Photo> GetPhotos(int id)
+        public Photo GetPhotos(int id)
         {
-            var photo = await _context.Photos.FirstOrDefaultAsync(p => p.Id == id);
+            var photo = _context.Photos.FirstOrDefault(p => p.Id == id);
 
             return photo;
         }
